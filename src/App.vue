@@ -1,6 +1,6 @@
 <template>
-  <div class="content">
-    <h1>Rsbuild with Vue</h1>
+  <div class="flex-center flex-col min-h-screen text-center text-24">
+    <h1 class="text-36 font-bold">Rsbuild with Vue</h1>
     <p>Start building amazing things with Rsbuild.</p>
   </div>
 </template>
@@ -8,25 +8,3 @@
 <script setup lang="ts">
   console.log(import.meta.env.BASE_URL);
 </script>
-
-<style scoped>
-.content {
-  display: flex;
-  min-height: 100vh;
-  line-height: 1.1;
-  text-align: center;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.content h1 {
-  font-size: 3.6rem;
-  font-weight: 700;
-}
-
-.content p {
-  font-size: 1.2rem;
-  font-weight: 400;
-  opacity: 0.5;
-}
-</style>

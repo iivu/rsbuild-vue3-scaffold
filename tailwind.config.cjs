@@ -28,7 +28,7 @@ function fontSize() {
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{html,js,ts,jsx,tsx}'],
+  content: ['./src/**/*.{html,js,ts,jsx,tsx,vue}'],
   theme: {
     fontSize: fontSize(),
     spacing: {
