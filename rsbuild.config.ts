@@ -51,12 +51,5 @@ export default defineConfig({
     port: 6021,
     base: isBuild ? process.env.APP_BASE_PATH : '/',
     proxy: isBuild ? undefined : proxyConfigs,
-  },
-  performance: {
-    chunkSplit: {
-      override: {
-        minSize: 1024 * 2,
-      },
-    },
-  },
+  }
 });
