@@ -1,0 +1,47 @@
+{
+  "name": "rsbuild-vue3-scaffold",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:test": "rsbuild build --env-mode=test",
+    "build:prod": "rsbuild build --env-mode=prod",
+    "dev:test": "rsbuild dev --env-mode=test --open",
+    "dev:prod": "rsbuild dev --env-mode=prod --open",
+    "format": "prettier --write .",
+    "preview": "rsbuild preview"
+  },
+  "dependencies": {
+    "@iivu/utils": "^2.0.9",
+    "animejs": "^4.0.2",
+    "axios": "^1.10.0",
+    "dayjs": "^1.11.13",
+    "md5": "^2.3.0",
+    "nanoid": "^5.1.5",
+    "pinia": "^3.0.3",
+    "vant": "^4.9.20",
+    "vue": "^3.5.17",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^1.3.22",
+    "@rsbuild/plugin-vue": "^1.0.7",
+    "@types/md5": "^2.3.5",
+    "@types/node": "^24.0.4",
+    "cross-env": "^7.0.3",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.13",
+    "tailwindcss": "3.4.17",
+    "typescript": "^5.8.3",
+    "unplugin-auto-import": "^19.3.0",
+    "unplugin-icons": "^22.1.0",
+    "unplugin-vue-components": "^28.7.0",
+    "vconsole": "^3.15.1"
+  },
+  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "core-js"
+    ]
+  }
+}
