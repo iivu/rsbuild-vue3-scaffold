@@ -1,4 +1,4 @@
-import { defineConfig, loadEnv } from '@rsbuild/core';
+import { defineConfig, loadEnv, type ProxyOptions } from '@rsbuild/core';
 import { pluginVue } from '@rsbuild/plugin-vue';
 import { VantResolver } from 'unplugin-vue-components/resolvers';
 import VueComponentAutoImport from 'unplugin-vue-components/rspack';
@@ -7,6 +7,12 @@ import Icons from 'unplugin-icons/rspack';
 
 const isBuild = process.env.NODE_ENV === 'production';
 const { publicVars } = loadEnv({ prefixes: ['APP_'] });
+const proxyConfigs: Record<string, string | ProxyOptions> = {
+  '/api': {
+    target: process.env.APP_API_PREFIX,
+    pathRewrite: (path) => path.replace(/^\/api/, ''),
+  },
+};
 
 console.log(`isBuild: ${isBuild}`);
 console.log(`APP_BASE_PATH: ${process.env.APP_BASE_PATH}`);
@@ -42,7 +48,9 @@ export default defineConfig({
     },
   },
   server: {
+    port: 6021,
     base: isBuild ? process.env.APP_BASE_PATH : '/',
+    proxy: isBuild ? undefined : proxyConfigs,
   },
   performance: {
     chunkSplit: {
