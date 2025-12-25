@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "build:test": "rsbuild build --env-mode=test",
-    "build:prod": "rsbuild build --env-mode=prod",
+    "build:prod": "rsbuild build --env-mode=production",
     "dev:test": "rsbuild dev --env-mode=test --open",
-    "dev:prod": "rsbuild dev --env-mode=prod --open",
+    "dev:prod": "rsbuild dev --env-mode=production --open",
     "format": "prettier --write .",
     "preview": "rsbuild preview"
   },

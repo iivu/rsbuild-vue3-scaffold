@@ -1,10 +1,12 @@
 /// <reference types="@rsbuild/core/types" />
 
 interface ImportMetaEnv {
-  readonly APP_TOKEN_NAME: string;
-  readonly APP_TITLE: string;
-  readonly APP_ENV: 'production' | 'test';
-  readonly APP_API_PREFIX: string;
+  readonly PUBLIC_APP_TOKEN_NAME: string;
+  readonly PUBLIC_APP_TITLE: string;
+  readonly PUBLIC_APP_ENV: 'production' | 'test';
+  readonly PUBLIC_APP_API_PREFIX: string;
+  readonly PUBLIC_APP_BASE_PATH: string;
+  readonly PUBLIC_APP_CDN_URL: string;
 }
 
 interface ImportMeta {

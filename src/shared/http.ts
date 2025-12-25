@@ -11,7 +11,7 @@ type AxiosRequestConfigWithCustomConfig<T> = AxiosRequestConfig<T> & HttpConfig;
 type CustomError = { msg?: string; catchError?: boolean; message?: string; code?: number };
 
 const httpClient = axios.create({
-  baseURL: import.meta.env.MODE === 'production' ? import.meta.env.APP_API_PREFIX : '/api',
+  baseURL: import.meta.env.MODE === 'production' ? import.meta.env.PUBLIC_APP_API_PREFIX : '/api',
   timeout: 20000,
 });
 const defaultHttpConfig: HttpConfig = { loading: true, catchError: true };

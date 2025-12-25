@@ -1,4 +1,4 @@
-const TOKEN_NAME = import.meta.env.APP_TOKEN_NAME;
+const TOKEN_NAME = import.meta.env.PUBLIC_APP_TOKEN_NAME;
 
 let _token = '';
 
